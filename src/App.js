@@ -4,17 +4,21 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Orders from "./components/Orders";
 import Prototypes from "./components/Prototypes";
+import AppStateProvider from "./provider/AppStateProvider";
 
 function App() {
   return (
     <>
-      <Header />
-      <div className="container">
-        <Prototypes />
-        <Orders />
-        <Footer />
-      </div>
+      <AppStateProvider>
+        <Header />
+        <div className="container">
+          <Prototypes />
+          <Orders />
+          <Footer />
+        </div>
+      </AppStateProvider>
     </>
+    
   );
 }
 
