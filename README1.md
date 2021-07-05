@@ -17,3 +17,7 @@ README1.md
       * totalPrice 계산 함수식은 값이 많으면 처리가 오래 걸릴 수 있다.
       * <u>그런데 useMemo를 사용하지 않으면 totalPrice처리 할때 과련된 변수 orders, prototypes이 변경되지 않고 다른 이유로 Orders 컴포넌트가 리렌더링 되어 totalPrice 구하는 함수가 수행될 것이다.</u>
       * <u>그래서 orders, prototypes의 객체가 변경될때만 계산하기 위함이다.</u>
+
+* useCallback 사용
+  * react.context컴포넌트에 provider설저에 useCallback을 사용
+  * useCallback은 hook의 dependency list에 설정한 값이 변경시에반 useCallback 첫번째 인자 값으로 설정한 함수가 다시 재 생성되면서 함수내에서 사용되는 값들이 update 된다.
